@@ -1,0 +1,375 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Alegreya", serif;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+nav {
+  padding: 1.25rem;
+  background-color: hsla(0, 0%, 20%, 0.351);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 545454545;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  width: 9.375rem;
+}
+
+nav .logo img {
+  width: 100%;
+}
+
+nav .links ul {
+  list-style: none;
+  display: flex;
+}
+nav .links ul li {
+  color: #fff;
+}
+nav .links ul li a {
+  margin: 0 0.625rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+header.main-header {
+  height: 100vh;
+  background-image: url(../Image/drew-coffman-1872.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header-content p,
+.header-content h1 {
+  color: rgb(255, 255, 255);
+}
+
+.header-subtitle {
+  margin: 1.5625rem 0 0;
+  font-size: 1.5625rem;
+}
+
+.header-title {
+  font-size: 3.125rem;
+  margin: 0.5rem 0;
+}
+
+.header-description {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.btn-cont {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  position: relative;
+}
+
+/* الشكل البيضاوي اللي تحت الزرار */
+.btn-cont::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 3.125rem;
+  border-radius: 1.5625rem;
+  border: 0.0625rem solid #fff;
+  top: calc(100% + 3rem);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* النقطة الصغيرة جوا الشكل */
+.btn-cont::before {
+  content: "";
+  position: absolute;
+  width: 0.4375rem;
+  height: 0.4375rem;
+  background-color: #a0522d;
+  border-radius: 50%;
+  top: calc(100% + 3rem);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: moveDot 2s infinite ease-in-out;
+}
+
+@keyframes moveDot {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) translateY(0.625rem);
+  }
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+}
+
+.learn-more {
+  background-color: #ffffffcc;
+  color: #333;
+}
+
+.contact-us {
+  background-color: #a0522d;
+  color: white;
+}
+
+/* About */
+.about-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-top: 1.875rem;
+}
+
+.about-image {
+  /* width: 500px; */
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  display: block;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+}
+
+.about-list-item {
+  margin-bottom: 1.5625rem;
+  font-size: 1rem;
+}
+
+.about-icon {
+  margin-right: 0.625rem;
+  color: #555;
+}
+
+/* About */
+/* backing */
+.backing {
+  margin-top: 1.875rem;
+  text-align: center;
+}
+.backing h3 {
+  margin: 1.875rem 0;
+  color: #303030;
+  font-size: 1.875rem;
+}
+.backing p {
+  margin: 1.0625rem 0;
+  font-size: 1.0625rem;
+  color: #888888;
+}
+.all-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+.all-box .box {
+  width: 30%;
+}
+.all-box .box img {
+  width: 100%;
+}
+
+.all-box .box h4 {
+  margin: 1.0625rem 0;
+  color: #686868;
+  font-size: 1.875rem;
+}
+
+.all-box .box p {
+  margin: 1.25rem 0;
+  color: #303030;
+  font-size: 1.0625rem;
+}
+/* backing */
+/* informaitions */
+.inforamition {
+  margin-top: 1.875rem;
+}
+.inforamition .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: space-between;
+}
+
+.contentsshkj {
+  flex: 1;
+}
+
+.contentsshkj h2 {
+  font-size: 2rem;
+  margin: 1.6875rem 0 1.5625rem;
+  color: #303030;
+}
+
+.contentsshkj p {
+  font-size: 1.0625rem;
+  color: #686868;
+}
+.contentsshkj ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding-bottom: 3.125rem;
+}
+.contentsshkj ul li {
+  margin-bottom: 1.875rem;
+  font-size: 1.0625rem;
+  color: #686868;
+}
+
+.contentsshkj ul li i {
+  margin-right: 0.9375rem;
+}
+.map {
+  flex: 1;
+}
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+/*  informaitions*/
+/* Main Foter */
+.main-fotter {
+  background-color: #403d38;
+  background-image: url(../Image/contact-details-map.png);
+  background-position: 90% center;
+  background-repeat: no-repeat;
+  padding: 3.75rem 0 3.25rem;
+}
+.main-fotter .container {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 10px; */
+  justify-content: space-between;
+}
+
+.main-fotter .container .box {
+  width: 44.44%;
+}
+
+.main-fotter .container .box h4 {
+  font-size: 1.125rem;
+  margin: 1.5rem 0 1.5625rem;
+  color: #fff;
+}
+
+.main-fotter .container .box p {
+  color: #969696;
+}
+
+.main-fotter .container .box ul {
+  margin: 1rem 0;
+  list-style: none;
+}
+
+.main-fotter .container .box ul li {
+  padding-bottom: 0.4375rem;
+  color: #969696;
+}
+
+/* Main Foter */
+.fotter {
+  background-color: rgb(53 51 48);
+  text-align: center;
+  padding: 3.125rem 0 2.5rem;
+}
+.fotter p {
+  margin: 0.3125rem 0 0.9375rem;
+  font-size: 0.9375rem;
+  color: #777777;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.9375rem;
+  justify-content: center;
+}
+
+.social-icons a {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #ffffff22; /* لون خلفية خفيف */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* علشان تبقى دايرة */
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.social-icons a:hover {
+  background-color: teal;
+  color: #fff;
+}
+@media (min-width: 36rem) and (max-width: 47.9988rem) {
+  nav .container,
+  nav .links ul,
+  .about-section .container,
+  .all-box,
+  .main-fotter .container,
+  .inforamition .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .all-box .box,
+  .main-fotter .container .box,
+  .map {
+    width: 100%;
+  }
+  nav .logo {
+    margin-bottom: 0.625rem;
+  }
+  .header-description {
+    font-size: 0.9375rem;
+  }
+}
